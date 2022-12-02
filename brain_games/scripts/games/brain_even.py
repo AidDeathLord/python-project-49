@@ -16,9 +16,9 @@ def brain_even_task():
 
 # проверка ответа игрока
 def check_brain_even(task, user_answer):
+    correct_answer = 'no'
     if task % 2 == 0:
         correct_answer = 'yes'
-    correct_answer = 'no'
     if correct_answer == user_answer:
         return (True, correct_answer)
     return (False, correct_answer)
