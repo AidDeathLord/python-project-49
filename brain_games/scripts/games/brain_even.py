@@ -18,14 +18,10 @@ def brain_even_task():
 def check_brain_even(task, user_answer):
     if task % 2 == 0:
         correct_answer = 'yes'
-        if correct_answer == user_answer:
-            return (True, correct_answer)
-        return (False, correct_answer)
-    if task % 2 == 1:
-        correct_answer = 'no'
-        if correct_answer == user_answer:
-            return (True, correct_answer)
-        return (False, correct_answer)
+    correct_answer = 'no'
+    if correct_answer == user_answer:
+        return (True, correct_answer)
+    return (False, correct_answer)
 
 
 def main():
