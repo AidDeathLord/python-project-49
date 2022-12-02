@@ -1,11 +1,15 @@
 [tool.poetry]
-name = "brain-games"
+name = "hexlet-code"
 version = "0.1.0"
 description = "check if you can go to 3rd grade"
 authors = ["Ihar Kostyuchik <kostyuchik22@gmail.com>"]
 repository = "https://github.com/AidDeathLord/python-project-49"
 readme = "README.md"
 packages = [{include = "brain_games"}]
+classifiers = [
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Build Tools"
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
