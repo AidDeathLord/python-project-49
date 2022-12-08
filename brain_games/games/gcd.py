@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# файл с игрой НОД
-from brain_games.scripts.start_game import start_game
+# функции для игры НОД
 from random import randint
 
 
@@ -13,7 +11,7 @@ def brain_gcd_rule():
 def brain_gcd_task():
     first_num = randint(1, 100)
     second_num = randint(1, 100)
-    return (f"{first_num} {second_num}")
+    return (f'{first_num} {second_num}')
 
 
 # проверка ответа игрока
@@ -27,11 +25,3 @@ def check_brain_gcd(task, user_answer):
     if correct_answer == int(user_answer):
         return (True, correct_answer)
     return (False, correct_answer)
-
-
-def main():
-    start_game(brain_gcd_rule, brain_gcd_task, check_brain_gcd)
-
-
-if __name__ == '__main__':
-    main()

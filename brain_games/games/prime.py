@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# файл с игрой простое число
-from brain_games.scripts.start_game import start_game
+# функции для игры простые числа
 from random import randint
 
 
@@ -23,11 +21,3 @@ def check_brain_prime(task, user_answer):
     if correct_answer == user_answer:
         return (True, correct_answer)
     return (False, correct_answer)
-
-
-def main():
-    start_game(brain_prime_rule, brain_prime_task, check_brain_prime)
-
-
-if __name__ == '__main__':
-    main()

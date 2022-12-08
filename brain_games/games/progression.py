@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# файл с игрой прогрессия
-from brain_games.scripts.start_game import start_game
+# функции для игры прогрессия
 from random import randint
 
 
@@ -50,11 +48,3 @@ def check_brain_progres(task, user_answer):
     if correct_result == int(user_answer):
         return (True, correct_result)
     return (False, correct_result)
-
-
-def main():
-    start_game(brain_progres_rule, brain_progres_task, check_brain_progres)
-
-
-if __name__ == '__main__':
-    main()

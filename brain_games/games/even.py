@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# файл с игрой четное - нечетное
-from brain_games.scripts.start_game import start_game
+# функции для игры четное-нечетное
 from random import randint
 
 
@@ -22,11 +20,3 @@ def check_brain_even(task, user_answer):
     if correct_answer == user_answer:
         return (True, correct_answer)
     return (False, correct_answer)
-
-
-def main():
-    start_game(brain_even_rule, brain_even_task, check_brain_even)
-
-
-if __name__ == '__main__':
-    main()

@@ -1,20 +1,19 @@
-#!/usr/bin/env python3
 # логика игр brain-games
 import prompt
-from brain_games.scripts.welcome_user import welcome_user
+from brain_games.games.welcome_user import welcome_user
 
 
 def start_game(rule, task, check_user_answer):
     # приветствие, запрос имени игрока и вывод правила игры
     gamer_name = welcome_user()  # запоминаем имя игрока
-    print(f"Hello, {gamer_name}!")
+    print(f'Hello, {gamer_name}!')
     print(rule())
 
     # запуск цикла игры
     for i in range(3):
         # вывод вопроса
         form_task = task()
-        print(f"Question: {form_task}")
+        print(f'Question: {form_task}')
         user_answer = prompt.string('Your answer: ')
 
         # запуск проверки
