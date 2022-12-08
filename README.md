@@ -16,4 +16,4 @@
 ### Brain-progression:
 (<script id="asciicast-DDGOirXvy8WVJ9D5Mf9Kjz80P" src="https://asciinema.org/a/DDGOirXvy8WVJ9D5Mf9Kjz80P.js" async></script>)
 ### Brain-prime:
-(<script id="asciicast-Ex4wKVcW7cNlSRcqG1HqaMvnk" src="https://asciinema.org/a/Ex4wKVcW7cNlSRcqG1HqaMvnk.js" async></script>)
+([![asciicast](https://asciinema.org/a/Ex4wKVcW7cNlSRcqG1HqaMvnk.svg)](https://asciinema.org/a/Ex4wKVcW7cNlSRcqG1HqaMvnk))
