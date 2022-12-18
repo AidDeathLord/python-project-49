@@ -2,6 +2,7 @@
 from random import randint
 from math import gcd
 
+
 # условие победы
 def rule():
     return ('Find the greatest common divisor of given numbers.')

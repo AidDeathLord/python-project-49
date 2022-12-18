@@ -10,8 +10,8 @@ def rule():
 # задание
 def get_question_and_answer():
     # создаем два рандомных числа для задания и рандомный знак
-    min_value_first_num = 10  
-    max_value_first_num = 30  
+    min_value_first_num = 10
+    max_value_first_num = 30
     first_num = randint(min_value_first_num, max_value_first_num)
 
     min_value_second_num = 1
@@ -19,7 +19,7 @@ def get_question_and_answer():
     second_num = randint(min_value_second_num, max_value_second_num)
 
     sumbol = choice(['+', '-', '*'])
-    
+
     question = (f'{first_num} {sumbol} {second_num}')
 
     # вычисляем правильный ответ

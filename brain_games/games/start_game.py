@@ -25,6 +25,6 @@ def start_game(game):
         # вы написали что надо убрать return
         # но если его убрать цикл for не будет прекращаться,
         # если ввести неверное значение
-        return (print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'. \
-\nLet's try again, {gamer_name}!"))
+        return (print(f"'{user_answer}' is wrong answer ;(. Correct answer was\
+'{answer}'. \nLet's try again, {gamer_name}!"))
     print(f"Congratulations, {gamer_name}!")

@@ -15,7 +15,7 @@ def get_question_and_answer():
 
     min_progres = 1
     max_progres = 10
-    progres = randint(min_progres, max_progres) 
+    progres = randint(min_progres, max_progres)
 
     min_progres_start = 1
     max_progres_start = 20
@@ -37,4 +37,3 @@ def get_question_and_answer():
     for i in result:
         question = question + str(i) + ' '
     return (question, str(answer))
- 
