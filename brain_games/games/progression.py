@@ -3,48 +3,38 @@ from random import randint
 
 
 # условие победы
-def brain_progres_rule():
+def rule():
     return ('What number is missing in the progression?')
 
 
 # задание
-def brain_progres_task():
-    progres_lenght = randint(4, 9)  # длина прогрессии
-    progres = randint(1, 10)  # на сколько увеличивается прогрессия
-    progres_start = randint(1, 20)  # стартовое значение прогрессии
-    result = str(progres_start)
+def get_question_and_answer():
+    min_progres_lenght = 4
+    max_progres_lenght = 9
+    progres_lenght = randint(min_progres_lenght, max_progres_lenght)
+
+    min_progres = 1
+    max_progres = 10
+    progres = randint(min_progres, max_progres) 
+
+    min_progres_start = 1
+    max_progres_start = 20
+    progres_start = randint(min_progres_start, max_progres_start)
 
     # создаем рандомную прогрессию
+    result = [progres_start]
     for i in range(progres_lenght):
-        result = result + ' ' + str(progres_start + progres)
+        result.append(progres_start + progres)
         progres_start += progres
 
     # убираем рандомное значение
-    result_split = result.split()
-    result_split[randint(0, progres_lenght)] = '..'
+    null_value = randint(0, progres_lenght)
+    answer = result[null_value]  # присваиваем правильный ответ
+    result[null_value] = '..'
 
-    # приводим к правильному выводу
-    result = ''
-    for i in result_split:
-        result = result + i + ' '
-    return result
-
-
-# проверка ответа игрока
-def check_brain_progres(task, user_answer):
-    task_split = task.split()
-    if task_split[0] == '..':
-        progres = int(task_split[2]) - int(task_split[1])
-        correct_result = int(task_split[1]) - progres
-    elif task_split[-1] == '..':
-        progres = int(task_split[-2]) - int(task_split[-3])
-        correct_result = int(task_split[-2]) + progres
-    else:
-        for index, i in enumerate(task_split):
-            if i == '..':
-                progres = int((int(task_split[index + 1]) - int
-                                  (task_split[index - 1])) / 2)
-                correct_result = int(task_split[index + 1]) - progres
-    if correct_result == int(user_answer):
-        return (True, correct_result)
-    return (False, correct_result)
+    # переписываем правильно вопрос
+    question = ''
+    for i in result:
+        question = question + str(i) + ' '
+    return (question, str(answer))
+ 

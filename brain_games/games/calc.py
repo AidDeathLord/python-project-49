@@ -3,28 +3,30 @@ from random import randint, choice
 
 
 # условие победы
-def brain_calc_rule():
+def rule():
     return ('What is the result of the expression?')
 
 
 # задание
-def brain_calc_task():
-    first_num = randint(10, 30)
-    second_num = randint(1, 10)
+def get_question_and_answer():
+    # создаем два рандомных числа для задания и рандомный знак
+    min_value_first_num = 10  
+    max_value_first_num = 30  
+    first_num = randint(min_value_first_num, max_value_first_num)
+
+    min_value_second_num = 1
+    max_value_second_num = 10
+    second_num = randint(min_value_second_num, max_value_second_num)
+
     sumbol = choice(['+', '-', '*'])
-    return (f'{first_num} {sumbol} {second_num}')
+    
+    question = (f'{first_num} {sumbol} {second_num}')
 
-
-# проверка ответа игрока
-def check_brain_calc(task, user_answer):
-    split_task = task.split()
-    if str(split_task[1]) == '+':
-        correct_answer = int(split_task[0]) + int(split_task[2])
-    if str(split_task[1]) == '-':
-        correct_answer = int(split_task[0]) - int(split_task[2])
-    if str(split_task[1]) == '*':
-        correct_answer = int(split_task[0]) * int(split_task[2])
-    if correct_answer == int(user_answer):
-        return (True, correct_answer)
-    if correct_answer != int(user_answer):
-        return (False, correct_answer)
+    # вычисляем правильный ответ
+    if sumbol == '+':
+        answer = first_num + second_num
+    if sumbol == '-':
+        answer = first_num - second_num
+    if sumbol == '*':
+        answer = first_num * second_num
+    return (question, str(answer))

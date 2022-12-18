@@ -3,20 +3,19 @@ from random import randint
 
 
 # условие победы
-def brain_even_rule():
+def rule():
     return ('Answer "yes" if the number is even, otherwise answer "no".')
 
 
 # задание
-def brain_even_task():
-    return (randint(1, 20))
+def get_question_and_answer():
+    # присваиваем для задания рандомное число от 1 до 20
+    min_question_num = 1
+    max_question_num = 20
+    question = randint(min_question_num, max_question_num)
 
-
-# проверка ответа игрока
-def check_brain_even(task, user_answer):
-    correct_answer = 'no'
-    if task % 2 == 0:
-        correct_answer = 'yes'
-    if correct_answer == user_answer:
-        return (True, correct_answer)
-    return (False, correct_answer)
+    # ищем правильный ответ
+    answer = 'no'
+    if question % 2 == 0:
+        answer = 'yes'
+    return (question, answer)

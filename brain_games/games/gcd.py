@@ -1,27 +1,19 @@
 # функции для игры НОД
 from random import randint
-
+from math import gcd
 
 # условие победы
-def brain_gcd_rule():
+def rule():
     return ('Find the greatest common divisor of given numbers.')
 
 
 # задание
-def brain_gcd_task():
+def get_question_and_answer():
+    # задаем для задания два рандомных числа
     first_num = randint(1, 100)
     second_num = randint(1, 100)
-    return (f'{first_num} {second_num}')
+    question = (f'{first_num} {second_num}')
 
-
-# проверка ответа игрока
-def check_brain_gcd(task, user_answer):
-    split_task = task.split()
-    first_num = int(split_task[0])
-    second_num = int(split_task[1])
-    for i in range(1, min(first_num, second_num)):
-        if first_num % i == 0 and second_num % i == 0:
-            correct_answer = i
-    if correct_answer == int(user_answer):
-        return (True, correct_answer)
-    return (False, correct_answer)
+    # вычисляем правильный ответ
+    answer = gcd(first_num, second_num)
+    return (question, str(answer))
