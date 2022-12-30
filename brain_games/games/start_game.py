@@ -2,29 +2,27 @@
 import prompt
 from brain_games.games.welcome_user import welcome_user
 
+GAME_LOOPS = 3  # количество игровых циклов
+
 
 def start_game(game):
-    game_loops = 3  # количество игровых циклов
-
     # приветствие, запрос имени игрока и вывод правила игры
     gamer_name = welcome_user()  # запоминаем имя игрока
     print(f'Hello, {gamer_name}!')
-    print(game.rule())
+    print(game.RULE)
 
     # запуск цикла игры
-    for i in range(game_loops):
+    for i in range(GAME_LOOPS):
         # генерируем вопрос и правильный ответ
-        question, answer = game.get_question_and_answer()
+        question, ans = game.get_question_and_answer()
         print(f'Question: {question}')
-        user_answer = prompt.string('Your answer: ')
+        user_ans = prompt.string('Your answer: ')
 
         # проверка
-        if answer == user_answer:
+        if ans == user_ans:
             print('Correct!')
             continue
-        # вы написали что надо убрать return
-        # но если его убрать цикл for не будет прекращаться,
-        # если ввести неверное значение
-        return (print(f"'{user_answer}' is wrong answer ;(. Correct answer was\
-'{answer}'. \nLet's try again, {gamer_name}!"))
-    print(f"Congratulations, {gamer_name}!")
+        print(f"'{user_ans}' is wrong answer ;(. Correct answer was '{ans}'.")
+        print(f"Let's try again, {gamer_name}!")
+        return
+    print(f'Congratulations, {gamer_name}!')

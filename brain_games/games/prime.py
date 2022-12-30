@@ -1,21 +1,26 @@
 # функции для игры простые числа
 from random import randint
 
+START_RANGE_QUESTION_NUM = 2
+END_RANGE_QUESTION_NUM = 100
+RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-# условие победы
-def rule():
-    return ('Answer "yes" if given number is prime. Otherwise answer "no".')
+
+# определяем четность
+def is_prime(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False
 
 
 # задание
 def get_question_and_answer():
-    min_question_num = 2
-    max_question_num = 100
-    question = randint(min_question_num, max_question_num)
+    question = randint(START_RANGE_QUESTION_NUM, END_RANGE_QUESTION_NUM)
 
     # вычисление правильного ответа
-    answer = 'yes'
-    for i in range(2, question - 1):
-        if question % i == 0:
-            answer = 'no'
+    if is_prime(question):
+        answer = 'yes'
+    else:
+        answer = 'no'
     return (question, answer)

@@ -1,39 +1,41 @@
 # функции для игры прогрессия
 from random import randint
 
+START_RANGE_PROGRES_LENGTH = 4
+END_RANGE_PROGRES_LENGTH = 9
+START_RANGE_PROGRES = 1
+END_RANGE_PROGRES = 10
+START_RANGE_PRGRES_START = 1
+END_RANGE_PRGRES_START = 20
+RULE = 'What number is missing in the progression?'
 
-# условие победы
-def rule():
-    return ('What number is missing in the progression?')
+
+# создаем прогрессию
+def create_progression(lenght, progres, start_num):
+    result = [start_num]
+    for i in range(lenght):
+        result.append(result[-1] + progres)
+    return result
 
 
 # задание
 def get_question_and_answer():
-    min_progres_lenght = 4
-    max_progres_lenght = 9
-    progres_lenght = randint(min_progres_lenght, max_progres_lenght)
+    progres_lenght = randint(START_RANGE_PROGRES_LENGTH,
+                             END_RANGE_PROGRES_LENGTH)
 
-    min_progres = 1
-    max_progres = 10
-    progres = randint(min_progres, max_progres)
+    progres = randint(START_RANGE_PROGRES, END_RANGE_PROGRES)
 
-    min_progres_start = 1
-    max_progres_start = 20
-    progres_start = randint(min_progres_start, max_progres_start)
+    progres_start = randint(START_RANGE_PRGRES_START, END_RANGE_PRGRES_START)
 
-    # создаем рандомную прогрессию
-    result = [progres_start]
-    for i in range(progres_lenght):
-        result.append(progres_start + progres)
-        progres_start += progres
+    progression = create_progression(progres_lenght, progres, progres_start)
 
     # убираем рандомное значение
     null_value = randint(0, progres_lenght)
-    answer = result[null_value]  # присваиваем правильный ответ
-    result[null_value] = '..'
+    answer = progression[null_value]  # присваиваем правильный ответ
+    progression[null_value] = '..'
 
     # переписываем правильно вопрос
     question = ''
-    for i in result:
+    for i in progression:
         question = question + str(i) + ' '
     return (question, str(answer))
