@@ -1,4 +1,4 @@
-# функции для игры прогрессия
+# functions for brain-progression
 from random import randint
 
 START_RANGE_PROGRES_LENGTH = 4
@@ -10,7 +10,6 @@ END_RANGE_PRGRES_START = 20
 RULE = 'What number is missing in the progression?'
 
 
-# создаем прогрессию
 def create_progression(lenght, progres, start_num):
     result = [start_num]
     for i in range(lenght):
@@ -18,7 +17,6 @@ def create_progression(lenght, progres, start_num):
     return result
 
 
-# задание
 def get_question_and_answer():
     progres_lenght = randint(START_RANGE_PROGRES_LENGTH,
                              END_RANGE_PROGRES_LENGTH)
@@ -29,12 +27,12 @@ def get_question_and_answer():
 
     progression = create_progression(progres_lenght, progres, progres_start)
 
-    # убираем рандомное значение
+    # remove random value
     null_value = randint(0, progres_lenght)
-    answer = progression[null_value]  # присваиваем правильный ответ
+    answer = progression[null_value]  # assign the correct answer
     progression[null_value] = '..'
 
-    # переписываем правильно вопрос
+    # rewrite the question
     question = ''
     for i in progression:
         question = question + str(i) + ' '

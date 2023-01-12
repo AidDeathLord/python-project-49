@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# запуск игры - НОД
-from brain_games.games.start_game import start_game
+# script for start game 'brain-gcd'
+from brain_games.start_game import start_game
 from brain_games.games import gcd
 
 

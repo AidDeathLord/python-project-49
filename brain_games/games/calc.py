@@ -1,4 +1,4 @@
-# функции для игры калькулятор
+# functions for 'brain-calc'
 from random import randint, choice
 import operator
 
@@ -14,15 +14,14 @@ get_operator = {'+': operator.add, '-': operator.sub,
                 '*': operator.mul, '/': operator.truediv, }.get
 
 
-# функция калькулятор
+# function calculator
 def calc(first_num, second_num, operator):
     op = get_operator(operator)
     return op(first_num, second_num)
 
 
-# задание
 def get_question_and_answer():
-    # создаем два рандомных числа для задания и рандомный знак
+    # create two random numbers for the task and a random sign
     first_num = randint(RANGE_START_FIRST_NUM, RANGE_END_FIRST_NUM)
 
     second_num = randint(RANGE_START_SECOND_NUM, RANGE_END_SECOND_NUM)

@@ -4,27 +4,27 @@
 ### Maintainability:
 (<a href="https://codeclimate.com/github/AidDeathLord/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/697cc4e6546ebe8ef998/maintainability" /></a>)
 
-    Brain-games - это набор интелектуальных консольных игр.
-    Для установки вам потребуется pip. Скачайте репозиторий с Git-hub и запустите команду - make install.
-    Для победы в играх вам потребуется правильно ответить на три вопроса.
-    Первая игра Brain-games - четное-нечетное. Чтобы победить введите yes, если число четное и no - если нечетное. Для запуска вам нужно ввести в терминал команду brain-even.
+    Brain-games - this is a set of intelligent console games.
+    To install you will need pip. Download the repository from Git-hub and run the command - make install.
+    To win the games you need to answer three questions correctly.
+    First game in Brain-games - Even-Odd. Enter to win yes, if the number is even and no - if odd. To run, you need to enter the command in the terminal brain-even.
 ### Brain-even and install:
 ([![asciicast](https://asciinema.org/a/5PhtkWPISVIC4GEUM2Vlg85g1.svg)](https://asciinema.org/a/5PhtkWPISVIC4GEUM2Vlg85g1))
 
-    Вторая игра - калькулятор. Здесь вам потребуется праввильно ввести результат арифметических выражений.
-    Для запуска введите коману brain-calc.
+    Second game  - calculator. Here you will need to correctly enter the result of arithmetic expressions.
+    Enter the command to run brain-calc.
 ### Brain-calc:
 ([![asciicast](https://asciinema.org/a/l2TuoatHFc4Yz9flfU0PNDJek.svg)](https://asciinema.org/a/l2TuoatHFc4Yz9flfU0PNDJek))
 
-    Следующая игра - НОД. Вычислите наибольший общий делитель для двух чисел. 
-    Команда запуска - brain-gcd.
+    Next game - GCD. Calculate the greatest common divisor for two numbers. 
+    Run command - brain-gcd.
 ### Brain-gcd:
 ([![asciicast](https://asciinema.org/a/W8M5Bzib9COc2rj7fJPyXMLnw.svg)](https://asciinema.org/a/W8M5Bzib9COc2rj7fJPyXMLnw))
 
-    В brain-progression вам нужно ввести пропущенное число в прогресси.
+    In brain-progression you need to enter the missing number in progress.
 ### Brain-progression:
 ([![asciicast](https://asciinema.org/a/DDGOirXvy8WVJ9D5Mf9Kjz80P.svg)](https://asciinema.org/a/DDGOirXvy8WVJ9D5Mf9Kjz80P))
 
-    И последняя игра - это brain-prime. Для победы укажите простое ли число в задании.
+    And last game - this brain-prime. To win, indicate whether the number in the task is prime.
 ### Brain-prime:
 ([![asciicast](https://asciinema.org/a/Ex4wKVcW7cNlSRcqG1HqaMvnk.svg)](https://asciinema.org/a/Ex4wKVcW7cNlSRcqG1HqaMvnk))

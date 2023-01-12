@@ -1,4 +1,4 @@
-# функции для игры четное-нечетное
+# functions for 'brain-even'
 from random import randint
 
 START_RANGE_QUESTION_NUM = 1
@@ -6,12 +6,11 @@ END_RANGE_QUESTION_NUM = 20
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-# задание
 def get_question_and_answer():
-    # присваиваем для задания рандомное число от 1 до 20
+    # assign a random number from 1 to 20 for the task
     question = randint(START_RANGE_QUESTION_NUM, END_RANGE_QUESTION_NUM)
 
-    # ищем правильный ответ
+    # check correct answer
     answer = 'no'
     if question % 2 == 0:
         answer = 'yes'

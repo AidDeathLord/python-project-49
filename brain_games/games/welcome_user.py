@@ -1,4 +1,4 @@
-# приветствие игрока
+# player greeting
 import prompt
 
 

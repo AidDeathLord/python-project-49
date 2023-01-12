@@ -1,4 +1,4 @@
-# функции для игры НОД
+# functions for 'brain-gcd'
 from random import randint
 from math import gcd
 
@@ -7,13 +7,12 @@ END_RANGE_QUESTION_NUMS = 100
 RULE = 'Find the greatest common divisor of given numbers.'
 
 
-# задание
 def get_question_and_answer():
-    # задаем для задания два рандомных числа
+    # set two random numbers for the task
     first_num = randint(START_RANGE_QUESTION_NUMS, END_RANGE_QUESTION_NUMS)
     second_num = randint(START_RANGE_QUESTION_NUMS, END_RANGE_QUESTION_NUMS)
     question = (f'{first_num} {second_num}')
 
-    # вычисляем правильный ответ
+    # check correct answer
     answer = gcd(first_num, second_num)
     return (question, str(answer))
