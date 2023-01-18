@@ -19,11 +19,12 @@ def start_game(game):
         user_answer = prompt.string('Your answer: ')
 
         # check
-        if correct_answer == user_answer:
-            print('Correct!')
-            continue
-        print(f'\'{user_answer}\' is wrong answer ;(. \
-Correct answer was \'{correct_answer}\'.')
-        print(f'Let\'s try again, {gamer_name}!')
-        return
+        if correct_answer != user_answer:
+            print(f'\'{user_answer}\' is wrong answer ;(.')
+            print(f'Correct answer was \'{correct_answer}\'.')
+            print(f'Let\'s try again, {gamer_name}!')
+            return
+        print('Correct!')
+        continue
+
     print(f'Congratulations, {gamer_name}!')
